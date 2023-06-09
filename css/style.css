@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+    --onyx: #3C3C3C;
+    --af-white: #F0EDEE;
+
+    --border-radius:30px;
+
+    margin: 0;
+    padding: 0;
+    background: #0A090C;
+    color: var(--onyx);
+    font-size: 32px;
+    font-family: sans-serif;
+}
+
+section{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 100px);
+    top: 100px;
+}
+
+section.sticky{
+    position:sticky;
+    margin-top: 100px;
+}
+
+/*Font*/
+h1{
+    color: var(--af-white);
+    font-size: 75px;
+    line-height: 1em;
+    margin: 0px;
+}
+h2{
+    font-size: 32px;
+    line-height: 1em;
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+}
+
+/*Navigation section*/
+nav{
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+nav ul li{
+    list-style: none;
+    margin-left: 43px;
+}
+nav ul li a{
+    color: var(--af-white);
+    font-family: monospace;
+}
+
+/*About me section*/
+section.about article{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+section.about article figure{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 35vw;
+    margin-top: 10vh;
+}
+section.about article .description{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: var(--af-white);
+    border-radius: var(--border-radius);
+    margin-left: 5vw; margin-right: 5vw;
+    margin-top: 3vh; margin-bottom: 3vh;
+    padding: 4vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    text-align: center;
+}
+
+/*Projects section*/
+section.projects article{
+    display: flex;
+    width: 100%;
+    margin-left: 5vw; margin-right: 5vw;
+}
+section.projects figure{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45vw;
+    height: calc(50vh - 100px);
+    padding: 1.5vw;
+    background: var(--af-white);
+    border-radius: var(--border-radius);
+    margin-left:5px; margin-right:0;
+}
+section.projects figure img{
+    width:100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+}
