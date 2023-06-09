@@ -4,6 +4,7 @@
 
 html,body{
     --onyx: #3C3C3C;
+    --night: #0A090C;
     --af-white: #F0EDEE;
 
     --border-radius:30px;
@@ -28,6 +29,12 @@ section.sticky{
     position:sticky;
     margin-top: 100px;
 }
+section.full-screen{
+    height: calc(100vh - 100px);
+    margin-top: 0;
+    top: 0;
+    z-index: 3;
+}
 
 /*Font*/
 h1{
@@ -37,6 +44,7 @@ h1{
     margin: 0px;
 }
 h2{
+    color: var(--af-white);
     font-size: 32px;
     line-height: 1em;
     margin: 0px;
@@ -60,6 +68,7 @@ nav ul{
     height: 100%;
     margin: 0;
     padding: 0;
+    background: var(--night);
 }
 nav ul li{
     list-style: none;
@@ -112,10 +121,61 @@ section.projects figure{
     padding: 1.5vw;
     background: var(--af-white);
     border-radius: var(--border-radius);
-    margin-left:5px; margin-right:0;
+    margin-top: 0;
 }
 section.projects figure img{
-    width:100%;
+    width: 100%;
     height: 100%;
     border-radius: var(--border-radius);
+}
+section.projects div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2vw;
+    height: calc(50vh - 100px);
+    background: var(--af-white);
+    border-radius: var(--border-radius);
+}
+
+section.projects.project-1{
+    top:100px;
+}
+section.projects.project-1 figure{
+    margin-left: 5px; margin-right: 0;
+}
+
+section.projects.project-2{
+    top: calc(50vh + 60px);
+}
+section.projects.project-2 figure{
+    margin-left: 0; margin-right: 5px;
+}
+
+/*Contact section*/
+section.contact{
+    background: var(--night);
+    border-radius: var(--border-radius);
+}
+
+section.contact .text{
+    display:flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 5vw;
+    margin-top: 10%;
+}
+section.contact figure{
+    background: var(--af-white);
+    border-radius: var(--border-radius);
+    padding: 4.5vw;
+}
+section.contact .git{
+    margin-right: 8vw;
+    margin-left: 5vw;
+}
+section.contact .instagram{
+    margin-right: 5vw;
+    margin-left: 8vw;
 }
