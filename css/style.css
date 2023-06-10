@@ -6,6 +6,10 @@ html,body{
     --onyx: #3C3C3C;
     --night: #0A090C;
     --af-white: #F0EDEE;
+    --poppy: #CE4242;
+    --crimson: #8C1313;
+    --pal-blue: #4542CE;
+    --ultramarine: #24138C;
 
     --border-radius:30px;
 
@@ -37,20 +41,18 @@ section.full-screen{
 }
 
 /*Font*/
-h1{
-    color: var(--af-white);
-    font-size: 75px;
-    line-height: 1em;
-    margin: 0px;
-}
+/*I was planning to use some titles on h1 but discarded that
+that's why i'm using h2 */
 h2{
-    color: var(--af-white);
     font-size: 32px;
     line-height: 1em;
     margin: 0px;
 }
 a{
     text-decoration: none;
+}
+p{
+    font-family: 'Oxanium', cursive;
 }
 
 /*Navigation section*/
@@ -76,7 +78,7 @@ nav ul li{
 }
 nav ul li a{
     color: var(--af-white);
-    font-family: monospace;
+    font-family: 'Oxanium', cursive;
 }
 
 /*About me section*/
@@ -112,6 +114,31 @@ section.projects article{
     width: 100%;
     margin-left: 5vw; margin-right: 5vw;
 }
+section.projects .text{
+    color: var(--onyx);
+}
+section.projects.project-1 .text .title{
+    color: var(--pal-blue);
+    font-family: 'Oxanium', cursive;
+    font-weight: bold;
+}
+section.projects.project-1 .text .link{
+    color: var(--ultramarine);
+    font-family: 'Oxanium', cursive;
+    text-decoration: underline;
+}
+
+section.projects.project-2 .text .title{
+    color: var(--poppy);
+    font-family: 'Oxanium', cursive;
+    font-weight: bold;
+}
+section.projects.project-2 .text .link{
+    color: var(--crimson);
+    font-family: 'Oxanium', cursive;
+    text-decoration: underline;
+}
+
 section.projects figure{
     display: flex;
     align-items: center;
@@ -165,6 +192,9 @@ section.contact .text{
     flex-direction: column;
     margin: 5vw;
     margin-top: 10%;
+    color: var(--af-white);
+    font-family: 'Antonio', sans-serif;
+    font-weight: bold;
 }
 section.contact figure{
     background: var(--af-white);
