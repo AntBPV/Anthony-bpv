@@ -58,19 +58,48 @@
         <section id="contact" class="contact full-screen">
             <div class="text git">
                 <h2>Github</h2>
-                <figure><a target="_blank" href="https://github.com/AntBPV"><img src="img/Github.png" width="150"/></figure></a>
+                <figure><a target="_blank" href="https://github.com/AntBPV"><img src="img/Github.png" width="150" onmouseover="newGit(this)" onmouseout="oldGit(this)" /></figure></a>
             </div>
             <div class="text email">
                 <h2>Email</h2>
-                <figure><a href="mailto:antonio.benja.parra.velasquez@gmail.com"><img src="img/Email.png" width="150"/></a></figure>
+                <figure><a href="mailto:antonio.benja.parra.velasquez@gmail.com"><img src="img/Email.png" width="150" onmouseover="newEmail(this)" onmouseout="oldEmail(this)" /></figure></a>
             </div>
             <div class="text instagram">
                 <h2>Instagram</h2>
-                <figure><a target="_blank" href="https://www.instagram.com/antonio_benja_vel/"><img src="img/Instagram.png" width="150"/></a></figure>
+                <figure><a target="_blank" href="https://www.instagram.com/antonio_benja_vel/"><img src="img/Instagram.png" width="150"  onmouseover="newIg(this)" onmouseout="oldIg(this)" /></a></figure>
             </div>
         </section>
 
         <script>
+            let project1Element = document.querySelector('.project-1 figure');
+            let project2Element = document.querySelector('.project-2 figure');
+
+            window.addEventListener('mousemove',handleMouseMove);
+            function handleMouseMove( event ){
+                project1Element.style.flexBasis = event.clientX + 'px';
+                project2Element.style.flexBasis = (window.innerWidth - event.clientX) + 'px';
+            }
+
+            function newGit(e){
+                e.src = "img/color-github.png";
+            }
+            function oldGit(e){
+                e.src = "img/Github.png";
+            }
+
+            function newEmail(e){
+                e.src = "img/color-email.png";
+            }
+            function oldEmail(e){
+                e.src = "img/Email.png";
+            }
+
+            function newIg(e){
+                e.src = "img/color-instagram.png";
+            }
+            function oldIg(e){
+                e.src = "img/Instagram.png";
+            }
 
         </script>
     </body>
